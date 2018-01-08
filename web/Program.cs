@@ -19,6 +19,7 @@ namespace web
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:5000;http://localhost:5001")
                 .UseStartup<Startup>()
                 .Build();
     }
